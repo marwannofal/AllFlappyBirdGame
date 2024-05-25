@@ -9,9 +9,9 @@ def resize_image(input_path, output_path, size):
         resized_img.save(output_path)
 
 # نعدل الابعاد للابعاد المناسبة
-resize_image(r'AllFlappyBirdGame/FlappyBirdGameAssets/Bird.png', 'bird_resized.png', (34, 24))
-resize_image(r'AllFlappyBirdGame/FlappyBirdGameAssets/pipe.png', 'pipe_resized.png', (50, 320))
-resize_image(r'AllFlappyBirdGame/FlappyBirdGameAssets/Background.png', 'background_resized.png', (600, 600))
+resize_image(r'FlappyBirdGameAssets\Bird.png', 'bird_resized.png', (34, 24))
+resize_image(r'FlappyBirdGameAssets\pipe.png', 'pipe_resized.png', (50, 320))
+resize_image(r'FlappyBirdGameAssets\Background.png', 'background_resized.png', (600, 600))
 
 # pygameنبلش ال
 pygame.init()
@@ -50,8 +50,8 @@ PIPE_IMAGE = pygame.image.load('pipe_resized.png')
 BACKGROUND_IMAGE = pygame.image.load('background_resized.png')
 
 # نحمل الاصوات
-FLAP_SOUND = pygame.mixer.Sound(r'AllFlappyBirdGame/FlappyBirdGameAssets/flap.mp3')
-HIT_SOUND = pygame.mixer.Sound(r'AllFlappyBirdGame/FlappyBirdGameAssets/hit.mp3')
+FLAP_SOUND = pygame.mixer.Sound(r'FlappyBirdGameAssets\flap.mp3')
+HIT_SOUND = pygame.mixer.Sound(r'FlappyBirdGameAssets\hit.mp3')
 
 # نحمل اللعبة ونحطلها عنوان
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
