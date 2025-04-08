@@ -1,30 +1,15 @@
-1- create virtual environment:
-
-
+## create virtual environment:
 python -m venv myenv
 
+## active the virtual environment:
+# if you using windows:
+    .\myenv\Scripts\activate
 
+# if you using linux:
+    source myenv/bin/activate
 
-2- active the virtual environment:
+## install req.txt:
+pip3 install -r req.txt
 
-
-.\myenv\Scripts\activate
-
-
-3- install pygame:
-
-
-pip install pygame
-
-
-4- install pillow: 
-
-
-
-pip install pillow
-
-
-5- run the game: 
-
-
+## run the game:
 python FlappyBirdGame.py

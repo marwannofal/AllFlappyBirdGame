@@ -2,16 +2,16 @@ import pygame
 import random
 from PIL import Image
 
-# عشان نعمل الابعاد تبعت الصورة صح 
+# عشان نعمل الابعاد تبعت الصورة صح
 def resize_image(input_path, output_path, size):
     with Image.open(input_path) as img:
         resized_img = img.resize(size, Image.Resampling.LANCZOS)
         resized_img.save(output_path)
 
 # نعدل الابعاد للابعاد المناسبة
-resize_image(r'FlappyBirdGameAssets\Bird.png', 'bird_resized.png', (34, 24))
-resize_image(r'FlappyBirdGameAssets\pipe.png', 'pipe_resized.png', (50, 320))
-resize_image(r'FlappyBirdGameAssets\Background.png', 'background_resized.png', (600, 600))
+resize_image(r'FlappyBirdGameAssets/Bird.png', 'bird_resized.png', (34, 24))
+resize_image(r'FlappyBirdGameAssets/pipe.png', 'pipe_resized.png', (50, 320))
+resize_image(r'FlappyBirdGameAssets/Background.png', 'background_resized.png', (600, 600))
 
 # pygameنبلش ال
 pygame.init()
@@ -39,19 +39,19 @@ BIRD_JUMP_STRENGTH = -7
 PIPE_WIDTH = 50
 PIPE_HEIGHT = 320
 PIPE_GAP = 250  # نكبر الفتحة عشان نخلي اللعبة اسهل
-PIPE_FREQUENCY = 2000  # الثواني 
+PIPE_FREQUENCY = 2000  # الثواني
 
 # FPSخصائص ال
 FPS = 60
 
-# نحمل الصور 
+# نحمل الصور
 BIRD_IMAGE = pygame.image.load('bird_resized.png')
 PIPE_IMAGE = pygame.image.load('pipe_resized.png')
 BACKGROUND_IMAGE = pygame.image.load('background_resized.png')
 
 # نحمل الاصوات
-FLAP_SOUND = pygame.mixer.Sound(r'FlappyBirdGameAssets\flap.mp3')
-HIT_SOUND = pygame.mixer.Sound(r'FlappyBirdGameAssets\hit.mp3')
+FLAP_SOUND = pygame.mixer.Sound(r'FlappyBirdGameAssets/flap.mp3')
+HIT_SOUND = pygame.mixer.Sound(r'FlappyBirdGameAssets/hit.mp3')
 
 # نحمل اللعبة ونحطلها عنوان
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -151,7 +151,7 @@ def main():
         draw_text('Press Space to Restart', pygame.font.Font(None, 36), BLACK, screen, 80, 350)
         pygame.display.update()
 
-        # RESTART نستنى اللاعب تا يعمل 
+        # RESTART نستنى اللاعب تا يعمل
         waiting = True
         while waiting:
             for event in pygame.event.get():
@@ -160,7 +160,7 @@ def main():
                     return
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                     waiting = False
-        
+
 # MAINعشان ندخل جوا ال
 if __name__ == '__main__':
     main()
