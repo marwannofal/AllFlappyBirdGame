@@ -164,3 +164,4 @@ def main():
 # MAINعشان ندخل جوا ال
 if __name__ == '__main__':
     main()
+    x = 5
