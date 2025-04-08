@@ -1,5 +1,5 @@
 ## create virtual environment:
-python -m venv myenv
+    python -m venv myenv
 
 ## active the virtual environment:
 # if you using windows:
@@ -9,7 +9,7 @@ python -m venv myenv
     source myenv/bin/activate
 
 ## install req.txt:
-pip3 install -r req.txt
+    pip3 install -r req.txt
 
 ## run the game:
-python FlappyBirdGame.py
+    python FlappyBirdGame.py
